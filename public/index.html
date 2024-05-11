@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS para estilos -->
+</head>
+<body>
+    <header>
+        <h1>Usuarios</h1> <!-- Encabezado principal -->
+    </header>
+    <main>
+        <ul id="user-list"></ul> <!-- Lista de usuarios -->
+        <!-- Modal con detalles del usuario y formulario de actualización -->
+        <div id="user-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span> <!-- Botón para cerrar el modal -->
+                <h2>Detalles del usuario</h2>
+                <form id="update-user-form">
+                    <input type="hidden" id="update-user-id"> <!-- Campo oculto para almacenar el ID del usuario -->
+                    <input type="text" id="update-username" placeholder="Nombre de usuario" required>
+                    <input type="text" id="update-lastName" placeholder="Apellido" required> <!-- Campo para el apellido -->
+                    <input type="number" id="update-age" placeholder="Edad" required>
+                    <button type="submit">Actualizar usuario</button>
+                </form>
+                <button id="delete-user-button">Eliminar</button> <!-- Botón para eliminar al usuario -->
+            </div>
+        </div>
+
+        <!-- Formulario para agregar un nuevo usuario -->
+        <form id="add-user-form">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="text" id="lastName" placeholder="Apellido" required> <!-- Campo para el apellido -->
+            <input type="number" id="age" placeholder="Edad" required>
+            <button type="submit">Agregar usuario</button>
+        </form>
+    </main>
+    <footer>
+        <!-- Scripts JavaScript -->
+        <script src="scripts.js"></script> <!-- Enlace al archivo de scripts JavaScript -->
+        <script>
+            // Asociar un evento de envío de formulario al formulario
+            document.getElementById('add-user-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar el envío del formulario por defecto
+                const username = document.getElementById('username').value;
+                const lastName = document.getElementById('lastName').value; // Obtener el apellido del campo correspondiente
+                const age = document.getElementById('age').value;
+                addUser(username, lastName, age); // Llamar a la función addUser con los valores del formulario
+            });
+        </script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer estilos básicos para todos los elementos, eliminando márgenes y rellenos predeterminados y asegurándose de que el modelo de caja sea de borde */
+
+body {
+    font-family: Arial, sans-serif; /* Establecer la fuente predeterminada */
+    background-color: #f9f9f9; /* Establecer el color de fondo del cuerpo */
+}
+
+header {
+    background-color: #333; /* Establecer el color de fondo del encabezado */
+    color: #fff; /* Establecer el color del texto del encabezado */
+    padding: 20px; /* Añadir espacio alrededor del contenido del encabezado */
+    text-align: center; /* Centrar el texto del encabezado */
+}
+
+main {
+    max-width: 600px; /* Establecer el ancho máximo del contenido principal */
+    margin: 20px auto; /* Centrar el contenido principal horizontalmente */
+    padding: 0 20px; /* Añadir espacio alrededor del contenido principal */
+}
+
+ul {
+    list-style: none; /* Eliminar los estilos de viñetas de las listas */
+    padding: 0; /* Eliminar el relleno predeterminado de la lista */
+}
+
+li {
+    background-color: #fff; /* Establecer el color de fondo de cada elemento de lista */
+    border-radius: 5px; /* Establecer esquinas redondeadas */
+    margin-bottom: 10px; /* Añadir espacio entre los elementos de la lista */
+    padding: 10px; /* Añadir espacio alrededor del contenido de cada elemento de lista */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agregar una sombra ligera */
+}
+
+form {
+    margin-top: 20px; /* Añadir espacio encima del formulario */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px; /* Añadir espacio dentro de los campos de entrada */
+    margin-right: 10px; /* Añadir espacio entre los campos de entrada */
+    margin-bottom: 10px; /* Añadir espacio debajo de los campos de entrada */
+    border: 1px solid #ccc; /* Establecer un borde con color de borde gris */
+    border-radius: 5px; /* Establecer esquinas redondeadas */
+}
+
+button {
+    padding: 10px; /* Añadir espacio dentro del botón */
+    margin-right: 10px; /* Añadir espacio entre los botones */
+    margin-bottom: 10px; /* Añadir espacio debajo de los botones */
+    border: 1px solid #ccc; /* Establecer un borde con color de borde gris */
+    border-radius: 5px; /* Establecer esquinas redondeadas */
+    background-color: #333; /* Establecer el color de fondo del botón */
+    color: #fff; /* Establecer el color del texto del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agregar una transición suave al color de fondo */
+}
+
+button:hover {
+    background-color: #555; /* Cambiar el color de fondo del botón al pasar sobre él */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none; /* Eliminar el contorno predeterminado al enfocar los campos de entrada */
+    border-color: #666; /* Cambiar el color del borde al enfocar los campos de entrada */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Establecer la posición del modal como fija */
+    z-index: 1; /* Establecer la posición z del modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permitir desplazamiento cuando el contenido del modal es demasiado grande */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Establecer el color de fondo del contenido del modal */
+    margin: 15% auto; /* Centrar el modal verticalmente */
+    padding: 20px; /* Añadir espacio alrededor del contenido del modal */
+    border: 1px solid #888; /* Establecer un borde con color de borde gris */
+    width: 80%; /* Establecer el ancho del contenido del modal */
+}
+
+/* Estilos para el botón de cierre (X) del modal */
+.close {
+    color: #aaa; /* Establecer el color del botón de cierre */
+    float: right; /* Alinear el botón de cierre a la derecha */
+    font-size: 28px; /* Establecer el tamaño del icono de cierre */
+    font-weight: bold; /* Establecer la negrita del icono de cierre */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Cambiar el color del botón de cierre al pasar sobre él */
+    text-decoration: none; /* Eliminar la decoración del texto del botón de cierre */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón de cierre */
+}
